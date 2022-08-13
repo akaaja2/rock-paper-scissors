@@ -19,6 +19,7 @@ let playerSelection = prompt(`Round ${i + 1} of 5: Enter you choice: Rock; Paper
 
 if (playerSelection.toLowerCase() === computerSelection) {
     alert("Draw!");
+    i = i - 1;
 
  } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') {
         alert("Winner winner chicken dinner; Paper beats Rock"); 
