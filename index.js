@@ -1,9 +1,18 @@
+// old code, pre UI
+
 // set the computerSelection to random; random number <33% <66%? If it works and its stupid, its not stupid //
 
 
 let playerScore = 0;
 let computerScore = 0;
 
+
+
+function playRound(playerSelection) {
+    let computerSelection = computerChoice;
+    let result = '';
+
+   
 for (let i = 0; i < 5; i++)  {
      
 
@@ -13,6 +22,10 @@ else if (computerChoice <= 0.66) {computerSelection= 'paper'}
 else {computerSelection= 'scissors'};
 console.log(computerChoice);
 console.log(computerSelection);
+
+
+
+
 
 
 let playerSelection = prompt(`Round ${i + 1} of 5: Enter you choice: Rock; Paper; Scissors`);
@@ -45,12 +58,19 @@ if (playerSelection.toLowerCase() === computerSelection) {
     }
      console.log(playerScore,computerScore);
     document.write('<br>',playerScore,"-",computerScore);
-    
+   
     }
+}
     if (playerScore > computerScore) {alert("You won the best of five")}
     else if (computerScore > playerScore) {alert("the machines won...")}
     else {alert("drawn together")};
 
-
-
-
+    
+const inputs = document.querySelectorAll('input');
+inputs.forEach((input) => {
+    input.addEventListener('click', () => {
+        console.log(input.id);
+        playRound(input.id);
+       
+      });
+    });

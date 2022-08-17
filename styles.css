@@ -1,0 +1,20 @@
+.content {
+    max-width: 500px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+   
+  }
+ body {
+     background-color: rgb(252, 243, 241);
+ }
+ .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    
+    align-items: center;
+    
+    background: #eee;
+ }
